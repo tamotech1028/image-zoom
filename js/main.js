@@ -23,5 +23,5 @@ $(function(){
 function randomImage ( imgArray, $target){
     var num = Math.random();
     num = Math.floor(num * imgArray.length);
-    $target.attr("src", "/img/" + imgArray[num] + ".jpg");
+    $target.attr("src", "img/" + imgArray[num] + ".jpg");
 };
