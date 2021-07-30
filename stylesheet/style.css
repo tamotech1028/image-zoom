@@ -12,6 +12,21 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
 header {
   background-color: #484848;
 }
@@ -61,7 +76,7 @@ header ul li a {
   padding: 10vh 0;
 }
 
-.container .content1 {
+.container .zoom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,27 +86,52 @@ header ul li a {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.container .content1 .content_title {
+.container .zoom h1 {
+  text-align: center;
   width: 100%;
+  padding: 50px 0;
 }
 
-.container .content1 .description {
-  width: 70%;
+.container .zoom #original-img {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #000;
 }
 
-.container .content1 .description p {
-  padding: 10px 20px 10px 0;
-  line-height: 2rem;
-  text-align: justify;
-}
-
-.container .content1 .thumbnaile {
-  width: 30%;
-}
-
-.container .content1 .thumbnaile img {
+.container .zoom #original-img img {
   width: 100%;
+  height: 100%;
+}
+
+.container .zoom #original-img span {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border: 1px solid #83828A;
+  background-color: rgba(130, 130, 130, 0.5);
+  display: none;
+}
+
+.container .zoom #zoom-img {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #000;
+}
+
+.container .zoom #zoom-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
